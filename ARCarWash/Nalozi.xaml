@@ -1,0 +1,36 @@
+﻿<Window x:Class="ARCarWash.Nalozi"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ARCarWash"
+        mc:Ignorable="d"
+        Title="Nalozi" SizeToContent="WidthAndHeight" Width="300"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        BorderThickness="1">
+    <Grid Margin="0" Background="LightGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Row="0" Background="CadetBlue" MouseDown="DockPanel_MouseDown">
+            <Button Width="32" HorizontalAlignment="Right" Margin="0 0 10 0" Background="Transparent" BorderThickness="0"
+                    Foreground="Red" Click="Button_Click" FontSize="20" Padding="0 -5 0 0" Content="X"></Button>
+        </DockPanel>
+
+        <StackPanel Grid.Row="1">
+            <DataGrid MaxHeight="250" Name="dataGridView" IsReadOnly="True" AutoGenerateColumns="true" AutoGeneratingColumn="dataGridView_AutoGeneratingColumn" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"></DataGrid>
+            <Label HorizontalAlignment="Center" Margin="0 50 0 10" FontWeight="Black">Novi korisnik</Label>
+            <Label HorizontalAlignment="Center" Margin="0 10">Korisničko ime</Label>
+            <TextBox Name="input_korisnickoIme" BorderThickness="0" Height="32" Width="200" TextAlignment="Center" FontSize="20" />
+            <Label HorizontalAlignment="Center" Margin="0 10">Šifra</Label>
+            <TextBox Name="input_sifra" HorizontalContentAlignment="Center" BorderThickness="0" Height="32" Width="200" FontSize="20" />
+            <Button Name="potvrdi" Content="Potvrdi" Padding="10" Width="100" Margin="0 20" Click="potvrdi_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Window>

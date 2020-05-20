@@ -1,0 +1,35 @@
+﻿<Window x:Class="ARCarWash.Izvestaj"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ARCarWash"
+        mc:Ignorable="d"
+        Title="Izvestaj" SizeToContent="WidthAndHeight" Width="300"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        BorderThickness="1">
+    <Grid Margin="0" Background="LightGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Row="0" Background="CadetBlue" MouseDown="DockPanel_MouseDown">
+            <Button Width="32" HorizontalAlignment="Right" Margin="0 0 10 0" Background="Transparent" BorderThickness="0"
+                    Foreground="Red" Click="Button_Click" FontSize="20" Padding="0 -5 0 0" Content="X"></Button>
+        </DockPanel>
+
+        <StackPanel Grid.Row="1">
+            <Label Margin="5">OD</Label>
+            <DatePicker Name="datumOD" Margin="5" />
+            <Label Margin="5">DO</Label>
+            <DatePicker Name="datumDO" Margin="5"/>
+            <ComboBox Margin="5" Name="korisnici_cmb" />
+            <Button Name="izvuciIzvestaj" Content="Pregled izveštaja" Padding="10" Margin="20" Click="izvuciIzvestaj_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Window>

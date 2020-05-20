@@ -1,0 +1,36 @@
+﻿<Window x:Class="ARCarWash.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ARCarWash"
+        mc:Ignorable="d"
+        Title="ARCarWash" Height="450" Width="800"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="0" Background="LightGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <DockPanel Grid.Row="0" Background="CadetBlue" MouseDown="Button_MouseDown">
+            <Button Width="32" HorizontalAlignment="Right" Margin="0 0 10 0" Background="Transparent" BorderThickness="0"
+                    Foreground="Red" Click="Button_Click" FontSize="20" Padding="0 -5 0 0" Content="X"></Button>
+        </DockPanel>
+
+        <StackPanel Grid.Row="1" VerticalAlignment="Center" >
+            <Label HorizontalAlignment="center" FontWeight="Black" FontSize="26" Margin="0 0 0 20">ARCarWash</Label>
+            <Button Content="Uloguj se kao radnik" Padding="10" Width="200" Margin="0 20" Click="Button_Click_1"></Button>
+            <Label HorizontalAlignment="Center" Margin="0 10">Admin Username</Label>
+            <TextBox Name="input_username" BorderThickness="0" Height="32" Width="200" TextAlignment="Center" FontSize="20" />
+            <Label HorizontalAlignment="Center" Margin="0 10">Admin Password</Label>
+            <PasswordBox Name="input_password" HorizontalContentAlignment="Center" BorderThickness="0" Height="32" Width="200" FontSize="20" />
+            <Button Content="Potvrdi" Padding="10" Width="100" Margin="0 20" Click="Button_Click_1"></Button>
+        </StackPanel>
+    </Grid>
+</Window>
